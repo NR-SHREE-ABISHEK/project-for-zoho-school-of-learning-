@@ -5,33 +5,31 @@ int main()
 int m1, m2, m3, m4, m5;
 int total;
 float average;
-char grade;
 cout << "Enter 5 subject marks: ";
 cin >> m1 >> m2 >> m3 >> m4 >> m5;
 total = m1 + m2 + m3 + m4 + m5;
 average = total/5;
 if (average >= 90)
 {
-grade =A;
-}
-else if (average >= 80)
-{
-grade =B;
+cout<<"you pass with grade A";
 }
 else if (average >= 70)
 {
-grade =C;
+cout<<"you pass grade b";
 }
-else if (average >= 60)
+else if (average >= 50)
 {
-grade =D;
+cout<<"you pass with grade c";
+}
+else if (average >= 35)
+{
+cout<<"you pass with grade d";
 }
 else 
 {
-grade =F;
+cout<<"better luck next time";
 }
 cout << "\nTotal Marks = " << total;
 cout << "\nAverage = " << average;
-cout << "\nGrade = " << grade;
 return 0;
 }
