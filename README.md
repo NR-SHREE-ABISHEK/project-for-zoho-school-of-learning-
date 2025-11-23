@@ -1,4 +1,4 @@
-# project-for-zoho-school-of-learning-
+\\student grade calculator
 my first project for my zoho school of learning
 #include <iostream>
 using namespace std;
