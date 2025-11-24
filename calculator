@@ -3,7 +3,6 @@ using namespace std;
 int main()
 {
 float numone,numtwo,result;
-float result;
 char op;
 cout<<"enter the two value";
 cin>>numone>>numtwo;
@@ -36,6 +35,3 @@ cout<<"invalid oprater";
 cout<<result;
 return 0;
 }
-
-
-
