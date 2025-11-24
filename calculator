@@ -2,5 +2,40 @@
 using namespace std;
 int main()
 {
-float numone,numtwo;
-char op
+float numone,numtwo,result;
+float result;
+char op;
+cout<<"enter the two value";
+cin>>numone>>numtwo;
+cout<<"enter the oprater";
+cin>>op;
+switch(op)
+{
+case '+':
+result=numone+numtwo;
+break;
+case '-':
+result=numone+numtwo;
+break;
+case '*':
+result=numone-numtwo;
+break;
+case '/':
+if(numtwo!=0)
+{
+result=numone/numtwo;
+}
+else
+{
+cout<<"division error";
+}
+break;
+default:
+cout<<"invalid oprater";
+}
+cout<<result;
+return 0;
+}
+
+
+
