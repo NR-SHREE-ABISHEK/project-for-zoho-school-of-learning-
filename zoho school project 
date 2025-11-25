@@ -5,8 +5,8 @@ int main()
 int m1, m2, m3, m4, m5;
 int total;
 float average;
-cout << "Enter 5 subject marks: ";
-cin >> m1 >> m2 >> m3 >> m4 >> m5;
+cout<< "Enter 5 subject marks: ";
+cin>> m1 >> m2 >> m3 >> m4 >> m5;
 total = m1 + m2 + m3 + m4 + m5;
 average = total/5;
 if (average >= 90)
@@ -29,7 +29,14 @@ else
 {
 cout<<"better luck next time";
 }
-cout << "\nTotal Marks = " << total;
-cout << "\nAverage = " << average;
+cout<<"marks for subject one"<<m1;
+cout<<"marks for subject two"<<m2;
+cout<<"mark for subject three"<<m3;
+cout<<"mark for subject four"<<m4;
+cout<<"mark for subject five"<<m5;
+cout<<"-------------------------------";
+cout<< "\nTotal Marks = " << total;
+cout<<"-------------------------------";
+cout<<"\nAverage = " << average;
 return 0;
 }
