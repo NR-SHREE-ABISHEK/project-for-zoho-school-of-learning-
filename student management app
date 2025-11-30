@@ -1,0 +1,44 @@
+#include <iostream>
+#include <fstream>
+#include <cstring>
+using namespace std;
+struct Student 
+{
+int roll;
+char name[50];
+int age;
+float marks;
+};
+void addStudent()
+{
+Student s;
+cout << "\nEnter Roll Number: ";  
+cin >> s.roll;  
+cout << "Enter Name: ";  
+cin >> s.name; // no getline  
+cout << "Enter Age: ";  
+cin >> s.age;  
+cout << "Enter Marks: ";  
+cin >> s.marks;  
+ofstream file("students.txt", ios::app);  
+file << s.roll << " "  <<s.name<<" "<<s.age<<" "<<s.mark<<endl;  
+file.close();  
+cout << "\nStudent Added Successfully.\n";
+}
+void displayStudents()
+{
+ifstream file("students.txt");
+if (!file)
+{  
+cout << "\nNo records found.\n"; 
+}  
+Student s;  
+while (file >> s.roll >> s.name >> s.age >> s.marks)
+{  
+cout << "\nRoll : " << s.roll;
+cout << "\nName : " << s.name;
+cout << "\nAge  : " << s.age;
+cout << "\nMarks: " << s.marks;
+}  
+file.close();
+}
