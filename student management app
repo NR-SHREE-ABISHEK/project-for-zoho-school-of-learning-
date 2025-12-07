@@ -42,3 +42,19 @@ cout << "\nMarks: " << s.marks;
 }  
 file.close();
 }
+void searchstudent()
+{
+int roll;
+cout<<"enter the roll number";
+cin>>roll;
+ifstream file("student.txt");
+student s;
+bool found=false;
+while(file>>s.roll>>s.name>>s.age>>s.mark)
+{
+if(s.roll==roll)
+{
+cout<<"\n name"<<s.name;
+cout<<"\n age"<<s.age;
+cout<<"\n roll"<<s.roll;
+cout<<\n
