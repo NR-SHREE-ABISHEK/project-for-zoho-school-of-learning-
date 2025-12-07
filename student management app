@@ -57,4 +57,15 @@ if(s.roll==roll)
 cout<<"\n name"<<s.name;
 cout<<"\n age"<<s.age;
 cout<<"\n roll"<<s.roll;
-cout<<\n
+cout<<"\n mark"<<s.mark;
+found=true;
+break;
+}
+}
+if(!found)
+{
+cout<<"\n the file is not found";
+cout<<"\n file illa da correct ha nunber ha enter pannu da";
+}
+file close();
+}
