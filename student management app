@@ -69,3 +69,98 @@ cout<<"\n file illa da correct ha nunber ha enter pannu da";
 }
 file close();
 }
+void delete student()
+{
+int roll;
+cout << "\nEnter roll number to delete: ";
+cin >> roll;
+ifstream file("students.txt");  
+ofstream temp("temp.txt");  
+Student s;  
+bool deleted = false;  
+while (file >> s.roll >> s.name >> s.age >> s.marks)
+{ 
+if (s.roll != roll)
+{  
+temp << s.roll << " "<< s.name << " "<< s.age << " " << s.marks << endl;  
+}
+else
+{  
+deleted = true;  
+}  
+}
+file.close();  
+temp.close();  
+remove("students.txt");  
+rename("temp.txt", "students.txt");  
+if (deleted)
+{
+cout << "\nRecord Deleted Successfully!\n"; 
+}
+else
+{
+cout << "\nRecord Not Found.\n";
+}
+}
+void updateStudent()
+{
+int roll;
+cout << "\nEnter roll number to update: ";
+cin >> roll;
+ifstream file("students.txt");  
+ofstream temp("temp.txt");  
+Student s;  
+bool updated = false;  
+while (file >> s.roll >> s.name >> s.age >> s.marks)
+{  
+if (s.roll == roll)
+{  
+cout << "Enter New Name: ";
+cin >> s.name;
+cout << "Enter New Age: ";
+cin >> s.age; 
+cout << "Enter New Marks: ";
+cin >> s.marks;
+updated = true; 
+}  
+temp << s.roll << " " << s.name << " " << s.age << " " << s.marks << endl;  
+}
+file.close();  
+temp.close();  
+remove("students.txt");  
+rename("temp.txt", "students.txt");  
+if (updated)
+{
+cout << "\nRecord Updated Successfully!\n";
+}
+else
+{
+cout << "\nRecord Not Found.\n";
+}
+}
+int main()
+{
+int choice;
+while (true)
+{  
+cout << "\n===== STUDENT MANAGEMENT SYSTEM =====\n";  
+cout << "1. Add Student\n";  
+cout << "2. Display All Students\n";  
+cout << "3. Search Student\n";  
+cout << "4. Delete Student\n";  
+cout << "5. Update Student\n";  
+cout << "6. Exit\n\n";  
+cout << "Enter your choice: ";  
+cin >> choice;  
+switch (choice)
+{  
+case 1: addStudent(); break;  
+case 2: displayStudents(); break;  
+case 3: searchStudent(); break;  
+case 4: deleteStudent(); break;  
+case 5: updateStudent(); break;  
+case 6: return 0;  
+default: cout << "\nInvalid Choice!\n";  
+}
+}
+}
