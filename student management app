@@ -21,7 +21,7 @@ cin >> s.age;
 cout << "Enter Marks: ";  
 cin >> s.marks;  
 ofstream file("students.txt", ios::app);  
-file << s.roll << " "  <<s.name<<" "<<s.age<<" "<<s.mark<<endl;  
+file << s.roll << " "  <<s.name<<" " <<s.age<<" " <<s.marks<<endl;  
 file.close();  
 cout << "\nStudent Added Successfully.\n";
 }
@@ -47,17 +47,17 @@ void searchstudent()
 int roll;
 cout<<"enter the roll number";
 cin>>roll;
-ifstream file("student.txt");
-student s;
+ifstream file("students.txt");
+Student s;
 bool found=false;
-while(file>>s.roll>>s.name>>s.age>>s.mark)
+while(file>>s.roll>>s.name>>s.age>>s.marks)
 {
 if(s.roll==roll)
 {
 cout<<"\n name"<<s.name;
 cout<<"\n age"<<s.age;
 cout<<"\n roll"<<s.roll;
-cout<<"\n mark"<<s.mark;
+cout<<"\n mark"<<s.marks;
 found=true;
 break;
 }
@@ -65,11 +65,11 @@ break;
 if(!found)
 {
 cout<<"\n the file is not found";
-cout<<"\n file illa da correct ha nunber ha enter pannu da";
+cout<<"\n file illa da correct ha number ha enter pannu da";
 }
-file close();
+file.close();
 }
-void delete student()
+void deletestudent()
 {
 int roll;
 cout << "\nEnter roll number to delete: ";
@@ -91,7 +91,7 @@ deleted = true;
 }
 file.close();  
 temp.close();  
-remove("students.txt");  
+remove("students.txt");
 rename("temp.txt", "students.txt");  
 if (deleted)
 {
@@ -156,8 +156,8 @@ switch (choice)
 {  
 case 1: addStudent(); break;  
 case 2: displayStudents(); break;  
-case 3: searchStudent(); break;  
-case 4: deleteStudent(); break;  
+case 3: searchstudent(); break;  
+case 4: deletestudent(); break;  
 case 5: updateStudent(); break;  
 case 6: return 0;  
 default: cout << "\nInvalid Choice!\n";  
