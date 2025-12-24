@@ -15,7 +15,7 @@ Student s;
 cout << "\nEnter Roll Number: ";  
 cin >> s.roll;  
 cout << "Enter Name: ";  
-cin >> s.name; // no getline  
+cin >> s.name;
 cout << "Enter Age: ";  
 cin >> s.age;  
 cout << "Enter Marks: ";  
