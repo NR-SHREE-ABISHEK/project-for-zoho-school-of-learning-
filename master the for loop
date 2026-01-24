@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int arr1[3][3], arr2[3][3], sub[3][3];
+int i, j;
+cout << "Enter 3 x 3 Array 1 Elements:\n";
+for (i = 0; i < 3; i++)
+{
+for (j = 0; j < 3; j++)
+{
+cin >> arr1[i][j];
+}
+}
+cout << "Enter 3 x 3 Array 2 Elements:\n";
+for (i = 0; i < 3; i++)
+{
+for (j = 0; j < 3; j++)
+{
+cin >> arr2[i][j];
+}
+}
+cout << "\nDifference between two matrices:\n";
+for (i = 0; i < 3; i++)
+{
+for (j = 0; j < 3; j++)
+{
+sub[i][j] = arr1[i][j] + arr2[i][j];
+cout << sub[i][j] << "\t";
+}
+cout << endl;
+}
+return 0;
+}
