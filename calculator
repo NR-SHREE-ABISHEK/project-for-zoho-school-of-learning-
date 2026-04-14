@@ -14,10 +14,10 @@ case '+':
 result=numone+numtwo;
 break;
 case '-':
-result=numone+numtwo;
+result=numone-numtwo;
 break;
 case '*':
-result=numone-numtwo;
+result=numone*numtwo;
 break;
 case '/':
 if(numtwo!=0)
